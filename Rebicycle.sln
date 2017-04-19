@@ -1,11 +1,11 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Daemon", "Daemon\Daemon.shproj", "{9AE5FD0D-1234-4A2E-828D-D6B86B78FAAC}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Rebicycle", "Daemon\Rebicycle.shproj", "{9AE5FD0D-1234-4A2E-828D-D6B86B78FAAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Daemon.iOS", "iOS\Daemon.iOS.csproj", "{C2DF3DD9-E884-4660-AC53-577EA208DE79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rebicycle.iOS", "iOS\Rebicycle.iOS.csproj", "{C2DF3DD9-E884-4660-AC53-577EA208DE79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Daemon.Droid", "Droid\Daemon.Droid.csproj", "{E520F170-3311-49E2-9D69-9E33CC2D295F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rebicycle.Droid", "Droid\Rebicycle.Droid.csproj", "{E520F170-3311-49E2-9D69-9E33CC2D295F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Daemon.MobileAppService", "MobileAppService\Daemon.MobileAppService.csproj", "{88C33E5F-46E3-4A2D-B645-A36D032D8F38}"
 EndProject
