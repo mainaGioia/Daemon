@@ -22,14 +22,14 @@ In App.xaml.cs, initiate the navigation service in the App() constructor:
 var navigationService = new NavigationService();
 ```
 
-At this point, you just need to instantiate the navigator you want passing it the initial page you want to display (here we suppose it's LoginPage). It is necessary to include **also this call in the App() constructor** because it will set the **MainPage** of the app - otherwise you will get an exception for not having set the root page.
+At this point, you just need to instantiate the navigator you want passing it the initial page you want to display (here we suppose it's called FirstPage). It is necessary to include **also this call in the App() constructor** because it will set the **MainPage** of the app - otherwise you will get an exception for not having set the root page.
 
 #### Hierarchical Navigation
 Navigate through pages, forwards and backwards, as desired. Push and pop pages from the navigation stack. 
 For having this kind of navigator, just add: 
 
 ```C#
-MainPage = navigationService.InitializeAsync(new LoginPage());
+MainPage = navigationService.InitializeAsync(new FirstPage());
 ```
 
 #### Tabs
