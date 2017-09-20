@@ -11,13 +11,13 @@
              This StackLayout you can use for other
              data that you want to have in your menu drawer
         -->
-        <StackLayout BackgroundColor="#2196F3"
+        <StackLayout 
                      HeightRequest="75">
 
             <Label Text="Some Text title"
                  FontSize="20"
                  VerticalOptions="CenterAndExpand"
-                 TextColor="White"
+                 TextColor="#000080"
                  HorizontalOptions="Center"/>
         </StackLayout>
 
