@@ -44,7 +44,7 @@ MainPage = navigationService.InitializeTabs(new List<CustomMenuItem> {
 ```
 where the `CustomMenuItem` represents a tab with his page to display, title and icon to show. It is possible to have till 5 tabs.
 
-### Drawer
+### Drawer (MasterDetailPage)
 To have a drawer menu, use the implementation of the MasterDetailPage. This takes as arguments the drawer menu page and the first detail page to be displayed.
 
 ```C#
@@ -53,7 +53,7 @@ MainPage = navigationService.InitializeDrawer(new DrawerPage(), new FirstPage())
 
 ### Push Pages
 
-##### Hierarchical Navigation (and Tabs)
+#### Hierarchical Navigation (and Tabs)
 ```C#
 Task PushView(Page page, ViewTransitionArgs transArgs, object args = null)
 ```
@@ -63,6 +63,15 @@ In case you wanna push a **modal** page, just add it as transArgs:
 await PushView(page, new ViewTransitionArgs{IsModal:true})
 ```
 
+#### MasterDetail Navigation
+
+In this case the page gets pushed as DetailPage, the MasterPage will be indeed the drawer menu. 
+
+```C#
+Task PushDetailView(Page page, object args = null)
+```
+
+Then, the DetailPage can be a navigationPage so we can hierachically push other pages on it to navigate forwards and backwards. 
 
 
 
