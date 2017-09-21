@@ -25,7 +25,7 @@ var navigationService = new NavigationService();
 
 At this point, you just need to instantiate the navigator you want passing it the initial page you want to display (here we suppose it's called FirstPage). It is necessary to include **also this call in the App() constructor** because it will set the **MainPage** of the app - otherwise you will get an exception for not having set the root page.
 
-#### Hierarchical Navigation
+### Hierarchical Navigation
 Navigate through pages, forwards and backwards, as desired. Push and pop pages from the navigation stack. 
 For having this kind of navigator, just add: 
 
@@ -33,7 +33,7 @@ For having this kind of navigator, just add:
 MainPage = navigationService.Initialize(new FirstPage());
 ```
 
-#### Tabs
+### Tabs
 Instead, for a TabbedPage Navigation add:
 
 ```C#
@@ -44,14 +44,14 @@ MainPage = navigationService.InitializeTabs(new List<CustomMenuItem> {
 ```
 where the `CustomMenuItem` represents a tab with his page to display, title and icon to show. It is possible to have till 5 tabs.
 
-#### Drawer
+### Drawer
 To have a drawer menu, use the implementation of the MasterDetailPage. This takes as arguments the drawer menu page and the first detail page to be displayed.
 
 ```C#
 MainPage = navigationService.InitializeDrawer(new DrawerPage(), new FirstPage());
 ```
 
-#### Push Pages
+### Push Pages
 
 ##### Hierarchical Navigation (and Tabs)
 ```C#
@@ -65,7 +65,7 @@ await PushView(page, new ViewTransitionArgs{IsModal:true})
 
 
 
-To display a modal page, just 
+
 List with all the APIs
 
 
