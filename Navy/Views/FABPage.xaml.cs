@@ -4,9 +4,9 @@ using Xamarin.Forms;
 
 namespace FinetunerApp.Views
 {
-    public partial class LoginView : ContentPage
+    public partial class FABPage : ContentPage
     {
-        public LoginView()
+        public FABPage()
         {
             InitializeComponent();
             BindingContext = new LoginViewModel();
