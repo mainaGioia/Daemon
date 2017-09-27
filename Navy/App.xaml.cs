@@ -1,8 +1,5 @@
-﻿using FinetunerApp.Service.Navigation.MenuItems;
-using FinetunerApp.Services.Navigation;
+﻿using FinetunerApp.Services.Navigation;
 using FinetunerApp.Views;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -22,7 +19,7 @@ namespace FinetunerApp
         private Page InitNavigation()
         {
             var navigationService = new NavigationService();
-            //return navigationService.InitializeAsync(new LoginView());
+            //return navigationService.InitializeAsync(new LoginPage());
             return navigationService.InitializeDrawerAsync(new DrawerPage(), new LoginPage());
             // TabbedPage
             //return navigationService.InitializeTabsAsync(new List<CustomMenuItem> {

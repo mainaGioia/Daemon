@@ -5,5 +5,10 @@
              xmlns:vm="clr-namespace:FinetunerApp.ViewModels;"
              Title="{Binding Title}">
 
+    <StackLayout>
+        <Button
+            Text="Next"
+            Command="{Binding MoveToNextCommand}"/>
+    </StackLayout>
    
 </ContentPage>

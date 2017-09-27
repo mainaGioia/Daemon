@@ -6,7 +6,7 @@ using System.Globalization;
 using System.Reflection;
 using FinetunerApp.Views;
 using System.Collections.Generic;
-using FinetunerApp.Service.Navigation.MenuItems;
+using FinetunerApp.Controls.MenuItems;
 
 namespace FinetunerApp.Services.Navigation
 {
@@ -52,7 +52,7 @@ namespace FinetunerApp.Services.Navigation
         /// <returns></returns>
         public Page InitializeDrawerAsync(ContentPage masterPage, ContentPage detailPage)
         {
-            return new Views.MasterDetailPage(masterPage, new BaseNavigationPage(detailPage));
+            return new BaseMasterDetailPage(masterPage, new BaseNavigationPage(detailPage));
         }
 
 
@@ -90,7 +90,17 @@ namespace FinetunerApp.Services.Navigation
         /// <returns></returns>
         public async Task PushView(Page page, ViewTransitionArgs transArgs, object args = null)
         {
-            var mainPage = Application.Current.MainPage as BaseNavigationPage;
+            var mainPage = Application.Current.MainPage;
+            if (mainPage is MasterDetailPage)
+                await PushDetailView(mainPage as MasterDetailPage, page, args);
+            else if (mainPage is BaseNavigationPage)
+                await PushHierarchicalView(mainPage as BaseNavigationPage, page, transArgs, args);
+                
+        }
+
+
+        async Task PushHierarchicalView(BaseNavigationPage mainPage, Page page, ViewTransitionArgs transArgs, object args = null)
+        {
             if (transArgs == null)
                 transArgs = new ViewTransitionArgs();
 
@@ -111,23 +121,28 @@ namespace FinetunerApp.Services.Navigation
                 Application.Current.MainPage = new BaseNavigationPage(page);
         }
 
-
         /// <summary>
         /// Implements the corresponding method in the INavigationService interface.
         /// Opens the specified page and closes the drawer (isPresented = false)
         /// </summary>
         /// <param name="page"> page to be opened as DetailPage </param>
         /// <param name="args"> optional arguments for the page to be opened </param>
+        async Task PushDetailView(MasterDetailPage mainPage, Page page, object args = null)
+        {
+            if (mainPage != null)
+                await mainPage.Detail.Navigation.PushAsync(page);
+        }
+
+
         public void PushDetailView(Page page, object args = null)
         {
-            var mainPage = Application.Current.MainPage as Xamarin.Forms.MasterDetailPage;
-            if (mainPage != null)
+            var mainPage = Application.Current.MainPage as MasterDetailPage;
+            if(mainPage != null)
             {
-                mainPage.Detail = new BaseNavigationPage(page);
+                mainPage.Detail = new NavigationPage(page);
                 mainPage.IsPresented = false;
             }
         }
-
 
         /// <summary>
         /// Implements the corresponding method in the INavigationService interface.

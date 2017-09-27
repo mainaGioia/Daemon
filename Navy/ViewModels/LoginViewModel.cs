@@ -12,7 +12,7 @@ namespace FinetunerApp.ViewModels
             Title = "Login";
         }
 
-        public ICommand MoveToNextCommand => new Command(async () => await NavigationService.PushView(new AboutPage()));
+        public ICommand MoveToNextCommand => new Command( () =>  NavigationService.PushView(new FABPage()));
 
     }
 }

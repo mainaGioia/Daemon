@@ -3,9 +3,9 @@ using Xamarin.Forms;
 
 namespace FinetunerApp.Views
 {
-    public partial class MasterDetailPage : Xamarin.Forms.MasterDetailPage
+    public partial class BaseMasterDetailPage : Xamarin.Forms.MasterDetailPage
     {
-        public MasterDetailPage(ContentPage masterPage, NavigationPage detailPage)
+        public BaseMasterDetailPage(ContentPage masterPage, NavigationPage detailPage)
         {
             Master = masterPage;
             Detail = detailPage;

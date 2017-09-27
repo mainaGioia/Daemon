@@ -46,10 +46,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FloatingActionButton.cs" />
     <Compile Include="Helpers\MessengingCenterAlert.cs" />
     <Compile Include="Helpers\ObservableObject.cs" />
     <Compile Include="Helpers\ObservableRangeCollection.cs" />
-    <Compile Include="Services\Navigation\MenuItems\CustomMenuItem.cs" />
+    <Compile Include="Controls\MenuItems\CustomMenuItem.cs" />
     <Compile Include="Models\BaseDataObject.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Services\Navigation\INavigationService.cs" />
@@ -66,8 +67,11 @@
     <Compile Include="Views\DrawerPage.xaml.cs">
       <DependentUpon>DrawerPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MasterDetailPage.xaml.cs">
-      <DependentUpon>MasterDetailPage.xaml</DependentUpon>
+    <Compile Include="Views\FABPage.xaml.cs">
+      <DependentUpon>FABPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BaseMasterDetailPage.xaml.cs">
+      <DependentUpon>BaseMasterDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -137,13 +141,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\MasterDetailPage.xaml">
+    <EmbeddedResource Include="Views\BaseMasterDetailPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\DrawerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\FABPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
