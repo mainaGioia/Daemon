@@ -1,9 +1,8 @@
-﻿using FinetunerApp.ViewModels;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
-namespace FinetunerApp.Views
+namespace XamarinNavy.Views
 {
-	public partial class BaseMasterDetailPage : Xamarin.Forms.MasterDetailPage
+	public partial class BaseMasterDetailPage : MasterDetailPage
 	{
 		public BaseMasterDetailPage(ContentPage masterPage, NavigationPage detailPage)
 		{

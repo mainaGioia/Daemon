@@ -1,7 +1,7 @@
 ﻿using XamarinNavy.ViewModels;
 using Xamarin.Forms;
 
-namespace FinetunerApp.Views
+namespace XamarinNavy.Views
 {
 	public partial class BaseNavigationPage : NavigationPage
 	{

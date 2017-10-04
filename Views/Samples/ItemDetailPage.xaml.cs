@@ -2,7 +2,7 @@
 using XamarinNavy.ViewModels;
 using Xamarin.Forms;
 
-namespace XamarinNavy.Views
+namespace XamarinNavy.Views.Samples
 {
     public partial class ItemDetailPage : ContentPage
     {

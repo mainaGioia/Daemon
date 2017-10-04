@@ -1,8 +1,10 @@
-﻿using XamarinNavy.Models;
-using XamarinNavy.Views;
+﻿using XamarinNavy.Views;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
+using XamarinNavy.Views.Samples;
+
+using BaseMenuItem = XamarinNavy.Models.BaseMenuItem;
 
 namespace XamarinNavy.ViewModels
 {
@@ -11,23 +13,23 @@ namespace XamarinNavy.ViewModels
         public DrawerViewModel()
         {
             Title = "Drawer";
-            listItems = new List<CustomMenuItem>
+            listItems = new List<BaseMenuItem>
             {
-                new CustomMenuItem
+                new BaseMenuItem
                 {
                     TargetType = typeof(AboutPage),
                     Title = "About",
                     Icon = "tab_about.png",
                 },
-                new CustomMenuItem
+                new BaseMenuItem
                 {
                     TargetType = typeof(ItemsPage),
                     Title = "Items",
                     Icon = "tab_feed.png",
                 },
-				new CustomMenuItem
+				new BaseMenuItem
 				{
-					TargetType = typeof(LoginPage),
+					TargetType = typeof(BaseLoginPage),
 					Title = "Login",
 					Icon = "tab_about.png",
 				}
@@ -40,7 +42,7 @@ namespace XamarinNavy.ViewModels
             get { return listItems; }
             set { SetObservableProperty(ref listItems, value); }
         }
-        static List<BaseMenuItem> listItems = new List<CustomMenuItem>();
+        static List<BaseMenuItem> listItems = new List<BaseMenuItem>();
 
         public BaseMenuItem SelectedMenuItem
         {

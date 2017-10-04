@@ -5,7 +5,7 @@ namespace XamarinNavy.Views
 {
 	public partial class BaseDrawerPage : ContentPage
 	{
-		public DrawerPage()
+		public BaseDrawerPage()
 		{
 			InitializeComponent();
 			BindingContext = new DrawerViewModel();

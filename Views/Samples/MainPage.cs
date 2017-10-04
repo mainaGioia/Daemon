@@ -1,8 +1,8 @@
-﻿using System;
+﻿using XamarinNavy.Views.Samples;
 
 using Xamarin.Forms;
 
-namespace XamarinNavy
+namespace XamarinNavy.Views
 {
     public class MainPage : TabbedPage
     {

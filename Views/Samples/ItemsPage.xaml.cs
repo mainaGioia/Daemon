@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using XamarinNavy.ViewModels;
 
 using Xamarin.Forms;
 
-namespace XamarinNavy.Views
+namespace XamarinNavy.Views.Samples
 {
     public partial class ItemsPage : ContentPage
     {

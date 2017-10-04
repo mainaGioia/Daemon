@@ -12,7 +12,7 @@ namespace XamarinNavy.ViewModels
             Title = "Login";
         }
 
-        public ICommand MoveToNextCommand => new Command( () =>  NavigationService.PushView(new FABPage()));
+        public ICommand MoveToNextCommand => new Command( () =>  NavigationService.PushView(new ItemsPage()));
 
     }
 }

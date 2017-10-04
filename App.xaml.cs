@@ -1,4 +1,4 @@
-﻿using System;
+﻿using XamarinNavy.Views;
 
 using Xamarin.Forms;
 
