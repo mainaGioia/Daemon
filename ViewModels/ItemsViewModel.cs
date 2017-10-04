@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using XamarinNavy.Views.Samples;
 
 using Xamarin.Forms;
 

@@ -1,4 +1,4 @@
-﻿using XamarinNavy.Views;
+﻿using XamarinNavy.Views.Samples;
 using System.Windows.Input;
 using Xamarin.Forms;
 
