@@ -13,7 +13,7 @@
         -->
         <StackLayout HeightRequest="75">
 
-            <Label Text="Some Text title"
+            <Label Text="Xamarin Navy"
                  FontSize="20"
                  VerticalOptions="CenterAndExpand"
                  TextColor="#000080"
@@ -25,7 +25,7 @@
                   SeparatorVisibility="None"
                   BackgroundColor="#e8e8e8"
                   ItemsSource="{Binding ListItems}"
-                  SelectedItem="{Binding SelectedMenuItem}">
+                  SelectedItem="{Binding SelectedMenuItem, Mode=TwoWay}">
             <!--ItemSelected="OnMenuItemSelected-->"
 
             <ListView.ItemTemplate>

@@ -29,7 +29,7 @@ namespace XamarinNavy
 		{
 			var navigationService = new NavigationService();
 			//return navigationService.InitializeAsync(new LoginPage());
-			return navigationService.InitializeDrawerAsync(new BaseDrawerPage(), new BaseLoginPage());
+            return navigationService.InitializeDrawerAsync(new BaseDrawerPage(), new ContentPage());
 			//return navigationService.InitializeTabsAsync(new List<CustomMenuItem> {
 			//    new CustomMenuItem { TargetType = typeof(AboutPage), Title = "About", Icon = "tab_about.png" },
 			//    new CustomMenuItem { TargetType = typeof(ItemsPage), Title = "Browse", Icon = "tab_feed.png" },
