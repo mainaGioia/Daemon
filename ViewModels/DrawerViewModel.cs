@@ -15,6 +15,12 @@ namespace XamarinNavy.ViewModels
             Title = "Drawer";
             listItems = new List<BaseMenuItem>
             {
+				new BaseMenuItem
+				{
+					TargetType = typeof(BaseLoginPage),
+					Title = "Login",
+					Icon = "tab_about.png",
+				},
                 new BaseMenuItem
                 {
                     TargetType = typeof(AboutPage),
@@ -26,14 +32,9 @@ namespace XamarinNavy.ViewModels
                     TargetType = typeof(ItemsPage),
                     Title = "Items",
                     Icon = "tab_feed.png",
-                },
-				new BaseMenuItem
-				{
-					TargetType = typeof(BaseLoginPage),
-					Title = "Login",
-					Icon = "tab_about.png",
-				}
+                }
             };
+            SelectedMenuItem = listItems[0];
         }
 
 
