@@ -52,9 +52,8 @@ namespace XamarinNavy.ViewModels
             {
                 if (value != null)
                 {
-                    NavigationService.PushDetailView((Page)Activator.CreateInstance(value.TargetType));
+                    NavigationService.PushView((Page)Activator.CreateInstance(value.TargetType));
                     SetObservableProperty(ref selectedMenuItem, value);
-                    System.Diagnostics.Debug.WriteLine("our dear selected item: " + selectedMenuItem.TargetType);
                     //    PageFactory.AddPreviousPageToStack();
                     //    PageFactory.ShowDetailNavigationPage(value);
                 }

@@ -57,14 +57,7 @@ namespace XamarinNavy.Services.Navigation
         Task PushView(Page page, ViewTransitionArgs transArgs = null, object args = null);
 
 
-        /// <summary>
-        /// Opens the specified detail page in a MasterDetailPage
-        /// </summary>
-        /// <param name="page"> page to open as DetailPage </param>
-        /// <param name="args"> optional args for the page to be opened </param>
-        void PushDetailView(Page page, object args = null);
-
-
+      
         /// <summary>
         /// Removes current page from the stack
         /// </summary>

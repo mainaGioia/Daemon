@@ -130,8 +130,10 @@ namespace XamarinNavy.Services.Navigation
         /// <param name="args"> optional arguments for the page to be opened </param>
         async Task PushDetailView(MasterDetailPage mainPage, Page page, object args = null)
         {
-            if (mainPage != null)
-                await mainPage.Detail.Navigation.PushAsync(page);
+            if (mainPage != null){
+                mainPage.Detail = new NavigationPage(page);
+                mainPage.IsPresented = false;
+            }
         }
 
 
