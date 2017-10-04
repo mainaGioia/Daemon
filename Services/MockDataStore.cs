@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FinetunerApp
+namespace XamarinNavy
 {
     public class MockDataStore : IDataStore<Item>
     {

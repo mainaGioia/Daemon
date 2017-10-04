@@ -1,10 +1,8 @@
-﻿using FinetunerApp.Services.Navigation;
-using FinetunerApp.Views;
-
+﻿using System;
 
 using Xamarin.Forms;
 
-namespace FinetunerApp
+namespace XamarinNavy
 {
     public partial class App : Application
     {
@@ -20,20 +18,10 @@ namespace FinetunerApp
             else
                 DependencyService.Register<CloudDataStore>();
 
-			MainPage = InitNavigation();
-
-		}
-
-
-		Page InitNavigation()
-		{
-			var navigationService = new NavigationService();
-			//return navigationService.InitializeAsync(new LoginPage());
-			return navigationService.InitializeDrawerAsync(new DrawerPage(), new LoginPage());
-			//return navigationService.InitializeTabsAsync(new List<CustomMenuItem> {
-			//    new CustomMenuItem { TargetType = typeof(AboutPage), Title = "About", Icon = "tab_about.png" },
-			//    new CustomMenuItem { TargetType = typeof(ItemsPage), Title = "Browse", Icon = "tab_feed.png" },
-			//});
-		}
+            if (Device.RuntimePlatform == Device.iOS)
+                MainPage = new MainPage();
+            else
+                MainPage = new NavigationPage(new MainPage());
+        }
     }
 }

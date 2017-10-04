@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using XamarinNavy.ViewModels;
 
 using Xamarin.Forms;
 
-namespace FinetunerApp
+namespace XamarinNavy.Views
 {
     public partial class ItemsPage : ContentPage
     {

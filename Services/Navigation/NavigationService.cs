@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Threading.Tasks;
-using FinetunerApp.ViewModels;
+using XamarinNavy.ViewModels;
 using Xamarin.Forms;
 using System.Globalization;
 using System.Reflection;
-using FinetunerApp.Views;
+using XamarinNavy.Views;
 using System.Collections.Generic;
-using FinetunerApp.Controls.MenuItems;
+using XamarinNavy.Models;
+using BaseMenuItem = XamarinNavy.Models.BaseMenuItem;
 
-namespace FinetunerApp.Services.Navigation
+namespace XamarinNavy.Services.Navigation
 {
     /// <summary>
     /// Implements the INavigationService providing view navigation.
@@ -56,10 +57,10 @@ namespace FinetunerApp.Services.Navigation
         }
 
 
-        public Page InitializeTabsAsync(List<CustomMenuItem> tabs)
+        public Page InitializeTabsAsync(List<BaseMenuItem> tabs)
         {
             TabbedPage tabNavigator = new TabbedPage();
-            foreach (CustomMenuItem item in tabs)
+            foreach (BaseMenuItem item in tabs)
                 tabNavigator.Children.Add(
                     new BaseNavigationPage((Page)Activator.CreateInstance(item.TargetType)) { Icon = item.Icon, Title = item.Title }
                     );

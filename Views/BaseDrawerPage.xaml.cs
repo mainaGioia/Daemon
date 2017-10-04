@@ -1,9 +1,9 @@
-﻿using FinetunerApp.ViewModels;
+﻿using XamarinNavy.ViewModels;
 using Xamarin.Forms;
 
-namespace FinetunerApp.Views
+namespace XamarinNavy.Views
 {
-	public partial class DrawerPage : ContentPage
+	public partial class BaseDrawerPage : ContentPage
 	{
 		public DrawerPage()
 		{

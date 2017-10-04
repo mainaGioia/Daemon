@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace FinetunerApp
+namespace XamarinNavy
 {
     public interface IDataStore<T>
     {

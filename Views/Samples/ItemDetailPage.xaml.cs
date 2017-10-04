@@ -1,8 +1,8 @@
 ﻿using System;
-
+using XamarinNavy.ViewModels;
 using Xamarin.Forms;
 
-namespace FinetunerApp
+namespace XamarinNavy.Views
 {
     public partial class ItemDetailPage : ContentPage
     {

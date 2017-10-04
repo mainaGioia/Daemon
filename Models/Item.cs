@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FinetunerApp
+namespace XamarinNavy
 {
     public class Item
     {

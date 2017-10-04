@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FinetunerApp
+namespace XamarinNavy.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel
     {

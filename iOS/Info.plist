@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>finetunerapp</string>
+	<string>XamarinNavy</string>
 	<key>CFBundleName</key>
-	<string>finetunerapp</string>
+	<string>XamarinNavy</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.medel.finetunerapp</string>
+	<string>com.alessandra.XamarinNavy</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

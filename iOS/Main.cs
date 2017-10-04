@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace FinetunerApp.iOS
+namespace XamarinNavy.iOS
 {
     public class Application
     {

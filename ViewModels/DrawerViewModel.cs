@@ -1,10 +1,10 @@
-﻿using FinetunerApp.Controls.MenuItems;
-using FinetunerApp.Views;
+﻿using XamarinNavy.Models;
+using XamarinNavy.Views;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 
-namespace FinetunerApp.ViewModels
+namespace XamarinNavy.ViewModels
 {
     public class DrawerViewModel : BaseViewModel
     {
@@ -35,14 +35,14 @@ namespace FinetunerApp.ViewModels
         }
 
 
-        public List<CustomMenuItem> ListItems
+        public List<BaseMenuItem> ListItems
         {
             get { return listItems; }
             set { SetObservableProperty(ref listItems, value); }
         }
-        static List<CustomMenuItem> listItems = new List<CustomMenuItem>();
+        static List<BaseMenuItem> listItems = new List<CustomMenuItem>();
 
-        public CustomMenuItem SelectedMenuItem
+        public BaseMenuItem SelectedMenuItem
         {
             get { return selectedMenuItem; }
             set
@@ -58,7 +58,7 @@ namespace FinetunerApp.ViewModels
                 //SetObservableProperty(ref selectedMenuItem, value);
             }
         }
-        CustomMenuItem selectedMenuItem;
+        BaseMenuItem selectedMenuItem;
 
 
     }

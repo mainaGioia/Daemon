@@ -2,7 +2,7 @@
 
 using Xamarin.Forms;
 
-namespace FinetunerApp
+namespace XamarinNavy.Views
 {
     public partial class AboutPage : ContentPage
     {

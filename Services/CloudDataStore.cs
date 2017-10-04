@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Plugin.Connectivity;
 
-namespace FinetunerApp
+namespace XamarinNavy
 {
     public class CloudDataStore : IDataStore<Item>
     {

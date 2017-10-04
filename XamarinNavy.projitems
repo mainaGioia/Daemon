@@ -3,10 +3,10 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>{17E5C51F-00AD-4ED4-A107-DEE71071D6E3}</SharedGUID>
+    <SharedGUID>{2B656D07-2C4F-402F-B165-D5D9F5C0D292}</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>FinetunerApp</Import_RootNamespace>
+    <Import_RootNamespace>XamarinNavy</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Item.cs" />
@@ -20,13 +20,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Controls\FloatingActionButton.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Controls\MenuItems\CustomMenuItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BaseMenuItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseDataObject.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Utilities\MessengingCenterAlert.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Utilities\ObservableRangeCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Navigation\INavigationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Navigation\NavigationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DrawerViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Samples\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
@@ -40,23 +39,18 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Samples\NewItemPage.xaml.cs">
       <DependentUpon>NewItemPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\BaseMasterDetailPage.xaml.cs">
-      <DependentUpon>BaseMasterDetailPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\BaseNavigationPage.xaml.cs">
       <DependentUpon>BaseNavigationPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\DrawerPage.xaml.cs">
-      <DependentUpon>DrawerPage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BaseMasterDetailPage.xaml.cs">
+      <DependentUpon>BaseMasterDetailPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml.cs">
-      <DependentUpon>LoginPage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BaseDrawerPage.xaml.cs">
+      <DependentUpon>BaseDrawerPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\FABPage.xaml.cs">
-      <DependentUpon>FABPage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BaseLoginPage.xaml.cs">
+      <DependentUpon>BaseLoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DrawerViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
@@ -64,14 +58,12 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Samples\ItemDetailPage.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Samples\ItemsPage.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Samples\NewItemPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BaseMasterDetailPage.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BaseNavigationPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DrawerPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FABPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BaseMasterDetailPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BaseDrawerPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BaseLoginPage.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Utilities\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Samples\" />
   </ItemGroup>
 </Project>

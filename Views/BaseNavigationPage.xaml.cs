@@ -1,4 +1,4 @@
-﻿using FinetunerApp.ViewModels;
+﻿using XamarinNavy.ViewModels;
 using Xamarin.Forms;
 
 namespace FinetunerApp.Views

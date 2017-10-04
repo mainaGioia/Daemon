@@ -1,8 +1,8 @@
-﻿using FinetunerApp.ViewModels;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Xamarin.Forms;
+using XamarinNavy.ViewModels;
 
-namespace FinetunerApp.Services.Navigation
+namespace XamarinNavy.Services.Navigation
 {
     /// <summary>
     /// Defines the type of page and animation to perform on push/pop

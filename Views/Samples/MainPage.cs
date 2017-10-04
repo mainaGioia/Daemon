@@ -1,6 +1,8 @@
-﻿using Xamarin.Forms;
+﻿using System;
 
-namespace FinetunerApp
+using Xamarin.Forms;
+
+namespace XamarinNavy
 {
     public class MainPage : TabbedPage
     {

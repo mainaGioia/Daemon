@@ -1,8 +1,8 @@
-﻿using FinetunerApp.Views;
+﻿using XamarinNavy.Views;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace FinetunerApp.ViewModels
+namespace XamarinNavy.ViewModels
 {
     class LoginViewModel : BaseViewModel
     {

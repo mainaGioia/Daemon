@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 using Xamarin.Forms;
 
-namespace FinetunerApp
+namespace XamarinNavy.ViewModels
 {
     public class AboutViewModel : BaseViewModel
     {

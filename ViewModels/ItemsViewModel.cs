@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace FinetunerApp
+namespace XamarinNavy.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {

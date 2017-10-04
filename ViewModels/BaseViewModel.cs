@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using FinetunerApp.Models;
-using FinetunerApp.Services.Navigation;
+using XamarinNavy.Models;
+using XamarinNavy.Services.Navigation;
 
 using Xamarin.Forms;
 
-namespace FinetunerApp
+namespace XamarinNavy.ViewModels
 {
     public class BaseViewModel : BaseDataObject
     {
