@@ -51,9 +51,12 @@ namespace XamarinNavy.Services.Navigation
         /// <param name="Master"> Masterpage, alias the list of menuitems </param>
         /// <param name="Detail"> Detailpage, alias the first page to display in the navigation part </param>
         /// <returns></returns>
-        public Page InitializeDrawerAsync(ContentPage masterPage, ContentPage detailPage)
+        public void InitializeDrawerAsync(ContentPage masterPage, ContentPage detailPage)
         {
-            return new BaseMasterDetailPage(masterPage, new BaseNavigationPage(detailPage));
+            Application.Current.MainPage = new MasterDetailPage();
+            var mainPage = Application.Current.MainPage as MasterDetailPage;
+            mainPage.Detail = new ContentPage();
+            mainPage.Master = new BaseDrawerPage();
         }
 
 

@@ -20,16 +20,17 @@ namespace XamarinNavy
 			else
 				DependencyService.Register<CloudDataStore>();
 
-			MainPage = InitNavigation();
+            //sets the mainpage (mandatory) and the main navigation 
+            InitNavigation();
 
 		}
 
 
-		Page InitNavigation()
+		void InitNavigation()
 		{
 			var navigationService = new NavigationService();
 			//return navigationService.InitializeAsync(new BaseLoginPage());
-            return navigationService.InitializeDrawerAsync(new BaseDrawerPage(), new ContentPage());
+            navigationService.InitializeDrawerAsync(new BaseDrawerPage(), new ContentPage());
 			//return navigationService.InitializeTabsAsync(new List<CustomMenuItem> {
 			//    new CustomMenuItem { TargetType = typeof(AboutPage), Title = "About", Icon = "tab_about.png" },
 			//    new CustomMenuItem { TargetType = typeof(ItemsPage), Title = "Browse", Icon = "tab_feed.png" },
