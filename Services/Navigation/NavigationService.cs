@@ -53,10 +53,11 @@ namespace XamarinNavy.Services.Navigation
         /// <returns></returns>
         public void InitializeDrawerAsync(ContentPage masterPage, ContentPage detailPage)
         {
-            Application.Current.MainPage = new MasterDetailPage();
-            var mainPage = Application.Current.MainPage as MasterDetailPage;
-            mainPage.Detail = new ContentPage();
-            mainPage.Master = new BaseDrawerPage();
+            //var mainPage = new MasterDetailPage();
+            //mainPage.Detail = new BaseNavigationPage();
+            //mainPage.Master = new BaseDrawerPage();
+
+            Application.Current.MainPage = new BaseMasterDetailPage(masterPage, new BaseNavigationPage(detailPage));
         }
 
 
@@ -95,6 +96,8 @@ namespace XamarinNavy.Services.Navigation
         public async Task PushView(Page page, ViewTransitionArgs transArgs, object args = null)
         {
             var mainPage = Application.Current.MainPage;
+            if(mainPage == null) 
+                Application.Current.MainPage = new MasterDetailPage();
             if (mainPage is MasterDetailPage)
                 await PushDetailView(mainPage as MasterDetailPage, page, args);
             else if (mainPage is BaseNavigationPage)
